@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import jakarta.validation.Valid;
 
 @CrossOrigin(origins = "*")
 @RestController
@@ -35,12 +36,12 @@ public class ArticuloController {
     }
 
     @PostMapping("/articulos")
-    public Articulo guardarArticulo(@RequestBody Articulo articulo) {
+    public Articulo guardarArticulo(@Valid @RequestBody Articulo articulo) {
         return articuloService.guardarArticulo(articulo);
     }
 
     @PutMapping("/articulos/{id}")
-    public Articulo actualizarArticulo(@PathVariable Long id, @RequestBody Articulo articulo) {
+    public Articulo actualizarArticulo(@PathVariable Long id, @Valid @RequestBody Articulo articulo) {
         return articuloService.actualizarArticulo(id, articulo);
     }
 

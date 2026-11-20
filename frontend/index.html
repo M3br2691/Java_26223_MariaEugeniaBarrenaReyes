@@ -23,7 +23,40 @@
         <button type="submit" class="btn btn-primary">Guardar</button>
         <button type="button" class="btn btn-secondary" id="cancelar">Cancelar</button>
     </form>
+    
+<div class="mb-4">
+    <h3>Buscar artículos</h3>
 
+    <div class="input-group mb-2">
+        <input type="number" id="buscarId"
+               class="form-control"
+               placeholder="Buscar por ID">
+
+        <button type="button" class="btn btn-info"
+                id="btnBuscar">
+            Buscar ID
+        </button>
+    </div>
+
+    <div class="input-group">
+        <input type="text" id="buscarNombre"
+               class="form-control"
+               placeholder="Buscar por nombre (ej.: caf)">
+
+        <button type="button" class="btn btn-info"
+                id="btnBuscarNombre">
+            Buscar nombre
+        </button>
+
+        <button type="button" class="btn btn-secondary"
+                id="btnMostrarTodos">
+            Mostrar todos
+        </button>
+    </div>
+</div>
+
+
+<div id="contenedorListado" style="display: none;">
     <table class="table table-bordered table-hover">
         <thead class="table-dark">
             <tr>
@@ -35,6 +68,7 @@
         </thead>
         <tbody id="tabla-articulos"></tbody>
     </table>
+</div>
 </div>
 
 <script src="js/app.js"></script>

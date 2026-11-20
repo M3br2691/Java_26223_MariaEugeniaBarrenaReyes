@@ -27,7 +27,7 @@ La aplicación permite realizar operaciones CRUD (crear, consultar, actualizar y
   - `repository`: gestiona el acceso a los datos.
   - `service`: contiene la lógica de las operaciones.
 - `src/main/resources`: archivos de configuración.
-- `Frontend`: interfaz web de la aplicación.
+- `frontend`: interfaz web de la aplicación.
   - `index.html`
   - `css/styles.css`
   - `js/app.js`
@@ -39,6 +39,22 @@ La aplicación permite realizar operaciones CRUD (crear, consultar, actualizar y
 - Registrar artículos nuevos.
 - Modificar artículos existentes.
 - Eliminar artículos.
+- Buscar artículos por ID o por nombre.
+- Mostrar todos los artículos registrados.
+
+## Validaciones del backend
+
+Se incorporaron validaciones mediante Jakarta Bean Validation para controlar los datos recibidos por la API.
+
+En la clase `Articulo` se utilizan las siguientes anotaciones:
+
+- `@NotBlank`: impide registrar un nombre vacío.
+- `@NotNull`: exige que el precio tenga un valor.
+- `@PositiveOrZero`: impide ingresar precios negativos.
+
+En los métodos de registro (`POST`) y actualización (`PUT`) del controlador se utiliza `@Valid` para ejecutar estas validaciones antes de procesar los datos.
+
+Las validaciones fueron comprobadas mediante Postman. Las solicitudes con datos inválidos reciben una respuesta HTTP `400 Bad Request`.
 
 ## Endpoints de la API
 
@@ -64,7 +80,7 @@ La configuración de conexión se encuentra en `application.properties`.
 2. Crear la base de datos `articulo_db`.
 3. Configurar la conexión en `application.properties`.
 4. Ejecutar la clase principal `ArticuloPracticaApplication`.
-5. Abrir el archivo `Frontend/index.html` en el navegador.
+5. Abrir el archivo `frontend/index.html` en el navegador.
 
 El backend se ejecuta localmente en el puerto 8080.
 
@@ -72,5 +88,5 @@ El backend se ejecuta localmente en el puerto 8080.
 
 María Eugenia Barrena Reyes
 
-Curso Back End Java — Talento Tech
+Curso Back End Java — Talento Tech  
 Comisión 26223

@@ -1,4 +1,3 @@
-
 // URL base de la API
 const API_URL = "http://localhost:8080/articulos";
 
@@ -15,10 +14,22 @@ document.getElementById("btnMostrarTodos").addEventListener("click", () => {
     listarArticulos();
 });
 
+document.getElementById("btnLimpiar").addEventListener("click", limpiarVista);
+
 document.getElementById("cancelar").addEventListener("click", () => {
     document.getElementById("form-articulo").reset();
     document.getElementById("idArticulo").value = "";
 });
+
+
+// === Limpiar la vista de resultados ===
+function limpiarVista() {
+    document.getElementById("tabla-articulos").innerHTML = "";
+    document.getElementById("contenedorListado").style.display = "none";
+
+    document.getElementById("buscarId").value = "";
+    document.getElementById("buscarNombre").value = "";
+}
 
 
 // === Mostrar artículos en la tabla ===
@@ -37,8 +48,8 @@ function mostrarArticulos(articulos) {
             <td>${articulo.nombre}</td>
             <td>${Number(articulo.precio).toFixed(2)}</td>
             <td>
-                <button class="btn btn-warning btn-sm btn-editar">Editar</button>
-                <button class="btn btn-danger btn-sm btn-eliminar">Eliminar</button>
+                <button class="btn btn-editar btn-sm">Editar</button>
+                <button class="btn btn-eliminar btn-sm">Eliminar</button>
             </td>
         `;
 

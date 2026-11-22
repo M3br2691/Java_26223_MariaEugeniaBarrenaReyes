@@ -1,3 +1,310 @@
+/* ===== Estilos generales ===== */
+
 body {
-    background-color: #f8f9fa;
+    margin: 0;
+    background-color: #f2f5f8;
+    color: #263746;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* ===== Encabezado ===== */
+
+.encabezado {
+    background: linear-gradient(135deg, #123344, #1d596b);
+    color: white;
+    padding: 42px 0;
+}
+
+.encabezado-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.etiqueta,
+.subtitulo {
+    display: block;
+    color: #6da9b8;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.encabezado h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.encabezado p {
+    color: #d5e3e8;
+    margin: 0;
+}
+
+.icono-encabezado {
+    width: 70px;
+    height: 70px;
+    border: 2px solid rgba(255, 255, 255, 0.55);
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* ===== Contenido principal ===== */
+
+.contenido-principal {
+    padding-top: 35px;
+    padding-bottom: 45px;
+}
+
+.panel {
+    background-color: #ffffff;
+    border: 1px solid #e3eaf0;
+    border-radius: 12px;
+    padding: 26px;
+    height: 100%;
+    box-shadow: 0 5px 18px rgba(25, 55, 75, 0.06);
+}
+
+.panel-titulo {
+    margin-bottom: 25px;
+}
+
+.panel-titulo h2 {
+    color: #173c4d;
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.panel-titulo .subtitulo {
+    color: #278196;
+}
+
+/* ===== Formularios ===== */
+
+.form-label {
+    color: #354d5b;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.form-control {
+    border: 1px solid #d7e0e7;
+    border-radius: 7px;
+    padding: 11px 13px;
+    font-size: 0.95rem;
+}
+
+.form-control:focus {
+    border-color: #278196;
+    box-shadow: 0 0 0 0.2rem rgba(39, 129, 150, 0.13);
+}
+
+.input-group-text {
+    background-color: #edf3f6;
+    border-color: #d7e0e7;
+    color: #426071;
+}
+
+/* ===== Botones ===== */
+
+.acciones-formulario,
+.acciones-busqueda {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.btn {
+    border-radius: 7px;
+    padding: 10px 17px;
+    font-weight: 600;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.btn-guardar {
+    background-color: #17677a;
+    color: white;
+}
+
+.btn-guardar:hover {
+    background-color: #105466;
+    color: white;
+}
+
+.btn-cancelar {
+    background-color: #e9eef2;
+    color: #405563;
+}
+
+.btn-cancelar:hover {
+    background-color: #dce4e9;
+    color: #263746;
+}
+
+.btn-buscar {
+    background-color: #278196;
+    color: white;
+}
+
+.btn-buscar:hover {
+    background-color: #1c6b7e;
+    color: white;
+}
+
+.btn-mostrar {
+    background-color: #173f53;
+    color: white;
+}
+
+.btn-mostrar:hover {
+    background-color: #102f40;
+    color: white;
+}
+
+.btn-limpiar {
+    background-color: #e9eef2;
+    color: #405563;
+}
+
+.btn-limpiar:hover {
+    background-color: #dce4e9;
+    color: #263746;
+}
+
+/* ===== Tabla de resultados ===== */
+
+.panel-resultados {
+    margin-top: 28px;
+    height: auto;
+}
+
+.tabla-articulos {
+    margin-bottom: 0;
+}
+
+.tabla-articulos thead {
+    background-color: #173f53;
+    color: white;
+}
+
+.tabla-articulos th {
+    padding: 14px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.tabla-articulos td {
+    padding: 13px 14px;
+    color: #354d5b;
+}
+
+.tabla-articulos tbody tr:hover {
+    background-color: #f1f7f9;
+}
+
+.tabla-articulos .btn {
+    padding: 6px 11px;
+    font-size: 0.8rem;
+    margin: 2px;
+}
+
+.btn-editar {
+    background-color: #e8b653;
+    color: #382b12;
+    border: none;
+}
+
+.btn-editar:hover {
+    background-color: #d9a33e;
+    color: #382b12;
+}
+
+.btn-eliminar {
+    background-color: #c94e58;
+    color: white;
+    border: none;
+}
+
+.btn-eliminar:hover {
+    background-color: #ad3944;
+    color: white;
+}
+
+/* ===== Pie de página ===== */
+
+.pie-pagina {
+    background-color: #123344;
+    color: #d5e3e8;
+    text-align: center;
+    padding: 30px 15px 18px;
+}
+
+.pie-pagina h3 {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.pie-pagina p {
+    font-size: 0.88rem;
+    margin-bottom: 6px;
+}
+
+.pie-pagina .autor {
+    color: white;
+    font-weight: 600;
+}
+
+.pie-pagina .tecnologias {
+    color: #8fc1cd;
+    margin-top: 12px;
+}
+
+.pie-final {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    margin-top: 20px;
+    padding-top: 14px;
+    font-size: 0.78rem;
+    color: #9db7c1;
+}
+
+/* ===== Adaptación a pantallas pequeñas ===== */
+
+@media (max-width: 576px) {
+    .encabezado {
+        padding: 30px 0;
+    }
+
+    .encabezado h1 {
+        font-size: 1.7rem;
+    }
+
+    .icono-encabezado {
+        width: 55px;
+        height: 55px;
+        font-size: 1.2rem;
+    }
+
+    .panel {
+        padding: 20px;
+    }
+
+    .acciones-formulario .btn,
+    .acciones-busqueda .btn {
+        flex: 1;
+    }
 }

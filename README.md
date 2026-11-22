@@ -124,6 +124,7 @@ La interfaz web se abrirá en el navegador y podrá comunicarse con el backend m
 
 **Importante:** para utilizar la aplicación deben estar funcionando tanto el servicio de base de datos como el backend.
 
+El video explicativo se encuentra en el siguiente link: https://www.youtube.com/watch?v=GQ3haFycXC0
 ## Autora
 
 **María Eugenia Barrena Reyes**
